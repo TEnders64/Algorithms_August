@@ -21,7 +21,7 @@ var titles = [
   'Shift Array Values',
   'Swap String For Array Negative Values'
 ];
-RSA
+
 // Print 1-255
 console.log(titles[titleIndex]);
 for (var i = 1; i <= 255; i++) {
