@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script>
+
+      function MaxMinAvg(arr) {
+          var max = arr[0];
+          var min = arr[0];
+          var sum = 0;
+          for(var i = 0; i < arr.length; i++){
+              if(arr[i] > max){
+                  max = arr[i];
+              }
+              if(arr[i] < min){
+                  min = arr[i];
+              }
+              sum += arr[i];
+          }
+          var avg = sum / arr.length;
+          var arrnew = [max, min, avg];
+          console.log(arrnew);
+      }
+
+      var arrRand = [3, 5, 21, 5, 3, 6, 23];
+      MaxMinAvg(arrRand);
+
+      </script>
+  </head>
+  <body>
+  </body>
+</html>
