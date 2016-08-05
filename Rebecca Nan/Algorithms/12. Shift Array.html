@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+<!--//Shift Array Values. Given an array, move all values forward by one index, dropping the first and leaving a 0 value at the end.-->
+
+		function shift_arr(arr) {
+			var temp = 0;
+
+			for (i = 0; i < arr.length; i ++) {
+				arr[i] = arr[i + 1];
+				arr[arr.length] === 0;
+			}
+			console.log(arr);
+		}
+		shift_arr([12,54,78,21,56,4,1,])	
+		</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>
