@@ -20,8 +20,6 @@ function min_max_avg(arr) {
         }
     }
 
-
-
     avg = sum / arr.length;
     var newArr = [min, max, avg];
     console.log(newArr);
