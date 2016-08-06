@@ -33,10 +33,10 @@ function popFront(arr) {
 
     // scoot everything over
     for (var i = 1; i < arr.length; i++) {
-        newArr[i - 1] = arr[i];
+        arr[i - 1] = arr[i];
     }
 
-    delete arr[arr.length - 1];
+    arr.length--;
 
     return frontVal;
 }
