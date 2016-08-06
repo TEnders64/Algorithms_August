@@ -63,7 +63,7 @@ for ( var i = 0; i < arr.length; i++) {
 titleIndex++;
 console.log(titles[titleIndex]);
 var arr = [20,56,8,135,7,1,-5,78];
-var max = 0;
+var max = arr[0];
 for (var i = 0; i < arr.length; i++) {
   max = arr[i] > max  ? arr[i] : max;
 }
@@ -133,7 +133,7 @@ printSeparator();
 titleIndex++;
 console.log(titles[titleIndex]);
 var arr = [20,56,8,135,7,1,-5,78];
-var max = 42, min = 0, sum = 0;
+var max = arr[0], min = arr[0], sum = 0;
 for (var i = 0; i < arr.length; i++) {
   sum += arr[i];
   min = arr[i] < min ? arr[i] : min;
