@@ -40,6 +40,7 @@ var counter = 0;
         {
             arr[counter++] = arr[i];
         }
+        console.log(arr);
     }
 
     arr.length = counter;
