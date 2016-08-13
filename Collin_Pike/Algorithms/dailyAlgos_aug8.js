@@ -19,7 +19,7 @@ console.log(arr);
 function removeNeg(){
 
     var count = 0;
-    for (var x = 0; x < arr.length - 1; x++){
+    for (var x = 0; x < arr.length; x++){
          if(arr[x] < 0){
            count++;
          }
