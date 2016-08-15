@@ -111,12 +111,14 @@ for (var i = 0; i < arr.length; i++){
 console.log(max, min, sum/arr.length);
 }
 //number12 _ Shift Array Values
-function shiftValues(arr){
+function shiftArray(){
+
 // var arr = [2,4,6,8];
 
-arr.shift();
-arr.push(0);
-
+for (var i = 0; i < arr.length; i++){
+    arr[i] = arr[i + 1];
+}
+arr[arr.length - 1] = 0;
 console.log(arr);
 }
 //number13 - Swap String for Array Negative Values
