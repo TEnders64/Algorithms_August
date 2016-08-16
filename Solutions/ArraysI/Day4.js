@@ -18,16 +18,14 @@ function removeNegatives(arr) {
 // Additional: Don't use nested loops
 //
 function removeNegativesInPlace(arr) {
-	var count = 0;
 	var pointer = 0;
 	for (var i = 0; i < arr.length; i++) {
 		if (arr[i] >= 0) {
 			arr[pointer] = arr[i]
 			pointer++;
-			count++;
 		}
 	}
-	arr.length = count;
+	arr.length = pointer;
 	return arr;
 }
 // console.log(removeNegativesInPlace(negArr))
