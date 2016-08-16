@@ -1,28 +1,32 @@
-function min_max_avg(arr) {
+// JavaScript provides a built-in parseInt method.
+//
+// It can be used like this:
+//
+// parseInt("10") returns 10
+// parseInt("10 apples") also returns 10
+// We would like it to return "NaN" (as a string) for the second case because the input string is not a valid number.
+//
+// You are asked to write a myParseInt method with the following rules:
+//
+// It should make the conversion if the given string only contains a single integer value (and eventually spaces - including tabs, line feeds... - at both ends)
+// For all other strings (including the ones representing float values), it should return NaN
+// It should assume that all numbers are not signed and written in base 10
 
-    var min = 0;
-    var max = 0;
-    var avg = 0;
-    var sum = 0;
 
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-        sum += arr[i];
+function myParseInt(str) {
+
+
+    if(str.match(/^\d+$/)){
+      console.log("valid int");
+      console.log(parseInt(str));
+      //valid integer
+  }else if(str.match(/^\d+\.\d+$/)){
+    console.log("valid float");
+      //valid float
+    }else{
+      //not valid number
+      console.log("NaN");
     }
-
-    min = max;
-
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] < min) {
-            min = arr[i];
-        }
-    }
-
-    avg = sum / arr.length;
-    var newArr = [min, max, avg];
-    console.log(newArr);
 }
 
-min_max_avg([2, 5, 12, 5, 234, 54]);
+myParseInt(" 10 ");
