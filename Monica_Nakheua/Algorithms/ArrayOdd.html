@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SumOdd5000</title>
+  <title>Array Odd</title>
 </head>
 <body>
 
   <script>
 
-  function sumOdd5000(){
-    var sum = 0;
-
-    for (var idx=0; idx<=5000; idx++)
+      function oddNumbers()
       {
-            if(idx % 2 == 1)
+        var arr = [];
+        for (var idx=1; idx<50; idx++)
                 {
-                        sum = sum +idx;
+                  if (idx % 2 ==1)
+                  arr.push(idx);
                 }
+                    {
+                      console.log(arr);
+                    }
       }
-    console.log(sum);
-  }
-  sumOdd5000()
+      oddNumbers()
 
   </script>
 
