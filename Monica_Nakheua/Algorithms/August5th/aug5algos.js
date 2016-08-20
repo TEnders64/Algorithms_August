@@ -73,3 +73,29 @@ Swap positions of successive pairs of values of given array. If length is odd, d
 Array Remove Duplicates
 
 Sara is looking to hire an awesome web developer and has received applications from various sources. Her assistant alphabetized them but noticed some duplicates. Given a sorted array, remove duplicate values. Because array elements are already in order, all duplicate values will be grouped together.
+
+function removeDups(names){
+
+    var names = ["Michael","Michael","Sarah","Sarah","Tim","Tim"];
+
+        var temp = 0;
+        var count = 0;
+
+                for (var idx = names.length - 1; idx > 0; idx--)
+                    {
+                    if(names[idx] === names[idx - 1]){
+                       for (var x = idx; x < names.length - 1; x++){
+                            temp = names[x];
+                            names[x] = names[x + 1];
+                            names[x + 1] = temp;
+                                  }
+                                  count++;
+                                  }
+                    }
+                        names.length -= count;
+                       if (names[names.length - 1] === names[names.length - 2]){
+                        names.length--;
+                       }
+    console.log(names);
+}
+removeDups()
