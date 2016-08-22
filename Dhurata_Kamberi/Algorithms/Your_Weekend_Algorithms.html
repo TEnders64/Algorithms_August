@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Daily Algorithms</title>
+  </head>
+  <body>
+    <script>
+  //  Insert At
+  // Given array, index, and one additional value, insert the value into array at given index.
+  // You can think of PushFront(arr,val) as equivalent to InsertAt(arr,0,val).
+      function insertAt(array, index, value){
+            array.length = array.length+1;
+            array[array.length-1] = value;
+            for(var i = array.length-1;i > index;i--)
+            {
+              var temp = array[i-1];
+              array[i-1]=array[i];
+              array[i]= temp;
+            }
+            console.log(array);
+      }
+      // var array = [1,2,3,4];
+      // var value = 5;
+      // insertAt(array, 1, value); -- Test
+
+// Remove At
+// Given array and an index in the array, remove and return the array value for that index.
+// Do this without using built-in array methods except pop(). Think of PopFront(arr) as equivalent to RemoveAt(arr,0).
+      function removeAt(arr, index)
+      {
+        console.log("Removed element: "+arr[index]);
+        for (var i = index; i<arr.length-1; i++){
+              arr[i] =arr[i+1];
+        }
+        arr.length--;
+        console.log(arr);
+      }
+      // var array = [1,2,3,4];
+      // var index = 2;
+      // removeAt(array,index) -- Test
+
+// Swap Array Pairs
+// Swap positions of successive pairs of values of given array. If length is odd, do not change final element.
+// For [1,2,3,4], return [2,1,4,3]. For [false,true,42], return [true,false,42].
+    function swapArray(arr){
+      for (var i = 0; i < arr.length-1; i++) {
+        if(i % 2 == 0)
+        {
+          var temp = arr[i];
+          arr[i] = arr[i+1];
+          arr[i+1] = temp;
+        }
+      }
+      console.log(arr);
+    }
+    // var arr1 = [1,2,3,4];
+    // console.log(arr1);
+    // swapArray(arr1);
+    // var arr2 =[false,true,3];
+    // console.log(arr2);
+    // swapArray(arr2); -- Test
+//
+// Array Remove Duplicates
+// Sara is looking to hire an awesome web developer and has received applications from various sources.
+// Her assistant alphabetized them but noticed some duplicates. Given a sorted array, remove duplicate values.
+// Because array elements are already in order, all duplicate values will be grouped together.
+    function removeDuplicates(arr)
+    {
+      var i1 = 0;
+      var i2 = 1;
+      var duplicates = 0;
+      while (i2 < arr.length) {
+        while (arr[i2] === arr[i1]) {
+          i2++;
+          duplicates++;
+        }
+        i1++;
+        arr[i1] = arr[i1+duplicates];
+        i2++;
+      }
+      arr.length = arr.length - duplicates;
+      return arr;
+    }
+    var arr = [1,1,2,3,3,3,4];
+    console.log("Duplicated elements: " +arr);
+    console.log("Removed duplicates: "+removeDuplicates(arr));
+    </script>
+  </body>
+</html>

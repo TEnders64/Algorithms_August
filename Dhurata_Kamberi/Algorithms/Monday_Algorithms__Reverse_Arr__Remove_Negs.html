@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Daily Algorithms</title>
+  </head>
+  <body>
+    <script>
+// Reverse array
+// Given a numerical array, reverse the order of the values. The reversed array should have the same length, with existing elements moved to
+// other indices so that the order of elements is reversed. Don’t use a second array – move the values around within the array that you are given.
+      function reverseArray(arr){
+        for (var i = 0; i < array.length/2; i++) {
+          var lastEle = array.length-1-i;
+             var temp = arr[i];
+              arr[i]= arr[lastEle];
+              arr[lastEle]= temp;
+        }
+          return arr;
+       }
+    // var array=[1,2,3,4,5];
+    // console.log(reverseArray(array))-- test
+
+// Remove negatives
+// Implement removeNegatives() that accepts an array and removes any negative values from that array.
+    function removeNegatives(arr){
+      var count =0;
+      for (var i = arr.length-1; i > 0; i--) {
+        if(array[i] <0){
+            console.log("Removed values:"+arr[i]);
+            arr[i] = arr[arr.length-1];
+            arr.pop();
+            i++;
+          }
+      }
+      return arr;
+    }
+    // var array=[1,2,-3,4,-5];
+    // console.log(removeNegatives(array))
+    </script>
+  </body>
+</html>
