@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Insert At</title>
+</head>
+<body>
+
+  Given array, index, and one additional value, insert the value into array at given index. You can think of PushFront(arr,val) as equivalent to InsertAt(arr,0,val).
+
+  <script>
+  function insertAt(arr,index,Y){
+
+    var arr = [1,2,4,4];
+    arr[index] = arr[2];
+    var y = 3;
+
+    for (i = arr.length ; i > index; i--){
+       arr[i] = arr[i - 1];
+              }
+                arr[index] = y;
+                arr.length--;
+                console.log(arr);
+              }
+    insertAt([1,2,4,4],2,3);
+
+  </script>
+
+</body>
+</html>
