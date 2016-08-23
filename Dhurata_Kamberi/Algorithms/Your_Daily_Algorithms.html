@@ -9,28 +9,29 @@
     /*Push Front
     Given array and an additional value, insert this value at the beginning of the array.*/
     function pushFront(array,x){
-      var newArray=[];
-      newArray[0]= x;
-      for(var i = 0 ;i <= array.length;i++){
-        newArray[i+1]= array[i];
-        console.log(newArray[i]);
+      array.length = array.length+1;
+      for(var i = array.length-1  ;i >= 0;i--){
+            array[i] = array[i-1];
       }
+      array[0] =x;
+      return array;
    }
-   //pushFront([1, 2, 3, 4],12);-- test
+  //  console.log(pushFront([1, 2, 3, 4],9));
 
     /*Pop Front
     Given array, remove and return the value at the beginning of the array. Do this without using any built-in array methods such as pop().*/
     function popFront(array)
     {
       var removedFirst = array[0];
-      var newArray=[]
-      for(var i = 0; i < array.length-1;i++)
+      console.log(removedFirst);
+      for(var i = 0; i < array.length;i++)
       {
-        newArray[i] = array[i+1];
+        array[i] = array[i+1];
       }
-      console.log(newArray,removedFirst);
-    }
-   //  popFront([1,2,3]); --test
+      array.length = array.length-1;
+      return array;
+     }
+     console.log(popFront([1,2,3]));
 
     </script>
   </body>
