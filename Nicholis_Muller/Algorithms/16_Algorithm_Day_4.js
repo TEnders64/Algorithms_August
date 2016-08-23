@@ -16,7 +16,7 @@ function removeNegatives(arr){
     console.log(arr);
 }
 
-// removeNegatives([9, 1, -4, 5, 13, -2, -8]);
+removeNegatives([9, 1, -4, 5, 13, -2, -8]);
 
 
 // Second-to-last
