@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<html lang="EN">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cameron's first 13!</title> 
+		<script>
+			//function to print 1-255
+			function get255() {
+			    for(var i=1; i<256; i++){
+					console.log(i) 			        
+			    }
+			}
+			//get255()
+
+			//print all odds from 1-255
+			function odds255() {
+				for(var i=1; i<=255; i=i+2) {
+					console.log(i)
+				}
+			}
+			//odds255()
+
+			//print ints and sum 0-255
+			function intsum() {
+				var sum=0;
+				for(var i=0; i<=255; i++) {
+				sum += i
+				console.log(i, sum)
+				}
+			}
+			//intsum()
+
+			//iterate and print array
+			function interprint(arr) {
+				for(i = 0; i < arr.length; i++){
+					console.log(arr[i])
+				}
+			}
+			//var myarr = [1,3,3,9]
+			//interprint(myarr)
+
+			//find and print max value in an array
+			function findprint(arr) {
+				var max = arr[0]
+				for(i = 0; i < arr.length; i++) {
+					if (arr[i] < max){
+						max = arr[i]
+					}
+				}
+				console.log(max)
+			}
+			//var myarr2 = [1,3,5,6,75,8]
+			//findprint(myarr2)
+
+			//take array's values and print the average
+			function printavg(arr){
+				var sum = 0
+				for(i = 0; i < arr.length; i++){
+					sum += arr[i]
+				}
+				console.log(sum/arr.length)
+			}
+			//var myarr3 = [1,2,3,4,5]
+			//printavg(myarr3)
+
+			//create array with all odds from 1-255
+			function arrodds(arr){
+				var arr = [];
+				for(i = 1; i<= 255; i++){
+					if(i % 2 === 1)
+						arr.push(i)
+				}
+				return arr
+			}
+			console.log(arrodds())
+
+			//square each value in an array
+			function squarearr(arr){
+				for (var i = 0; i < arr.length; i++){
+					arr[i] = Math.pow(arr[i],2);
+				};
+				return arr;
+			}
+			//var sqrarr = squarearr([1,2,3]);
+			//console.log(sqrarr);
+
+			//given a value, count and print array values greater than
+			function greaterthan(arr, y) {
+				var counter = 0;
+				for(var i = 0; i < arr.length; i++){
+					if(arr[i] > y){
+						counter++;
+					}
+				}
+				console.log(counter);
+			}
+			//var myArr4 = [1,3,4,5,6,7];
+			//greaterthan(myArr4, 3);
+
+			//zero out negative numbers
+			function zeroneg(arr) {
+				for(var i = 0; i < arr.length; i++){
+					if(arr[i] < 0){
+						arr[i] = 0;
+					}
+				}
+				return arr;
+			}
+			//var myarr5 = [3,-3,5,-6,0]
+			//console.log(zeroneg(myarr5))
+
+			//find max, min, and average for array
+			function maxminavg(arr){
+				var max = arr[0];
+				var min = arr[0];
+				var sum = 0;
+				for (var i = 0; i < arr.length; i++){
+					if (arr[i] > max){
+						max = arr[i];
+					}
+					if (arr[i] < min){
+						min = arr[i];
+					}
+					sum += arr[i]
+				}
+				console.log("max:", max, "Min:", min, "Avg", sum/arr.length)
+			}
+			//var myarr6 = [1,2,44,5,6,-5]
+			//maxminavg(myarr6)
+
+			//shift all array values forward, drop 1st last is 0
+			function shift(arr){
+				for(var i = 0; i < arr.length - 1; i++){
+					arr[i] = arr[i + 1]
+				}
+				arr[arr.length-1] = 0
+			}
+			//var myarr7=[1,2,4,5]
+			//shift(myarr7)
+
+			//swap negatives with "dojo"
+			function negdojo(arr){
+				for(var i = 0; i < arr.length; i++){
+					if (arr[i] < 0){
+						arr[i] = "Dojo"
+					}
+					return arr
+				}
+			}
+			//var myarr8 = [1,-2,3,-4,5];
+			//negdojo(myarr8);
+			//console.log(myarr8);
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
