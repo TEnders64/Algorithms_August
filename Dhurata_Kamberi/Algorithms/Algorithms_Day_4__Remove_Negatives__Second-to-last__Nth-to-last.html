@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Algorithms Day 4</title>
+  </head>
+  <body>
+    <script>
+// Remove negatives
+//
+// Implement removeNegatives() that accepts an array, removes negative values, and returns the same array (not a copy), preserving non-negatives’ order.
+// Additional: Don't use nested loops
+//
+        function removeNegatives(array){
+          for (var i = array.length-1; i >= 0; i--) {
+            if(array[i] <0){
+                console.log("Removed values:"+array[i]);
+                array[i] = array[array.length-1];
+                array.pop();
+                i++;
+              }
+          }
+          return array;
+        }
+        // var arr1 = [-1,2,5,-6];
+        // console.log(arr1);
+        // console.log(removeNegatives(arr1));
+//
+// Second-to-last
+// Return the second-to-last element of an array. Given [42,true,4,"Liam",7], return "Liam". If array is too short, return null.
+//
+      function secondToLast(arr){
+        var result="";
+        if(arr.length >2){
+          result = arr[arr.length-2];
+        }
+        else {
+          result = null;
+        }
+        return result;
+      }
+      // var arr1 = [42,true,4,"Liam",7];
+      // console.log(arr1);
+      // console.log(secondToLast(arr1));
+
+
+//
+// Nth-to-last
+// Return the element that is N-from-array’s-end. Given ([5,2,3,6,4,9,7],3), return 4. If the array is too short, return null.
+    function nthToLast(arr, idx){
+      var result = "";
+      if(arr.length > 2){
+        result = arr[arr.length-idx];
+      }
+      else {
+        result = null;
+      }
+      return result;
+    }
+    // var arr1 = [5,2,3,6,4,9,7]; // returns 4
+    // var arr1 =[4,3]; //returns null 
+    // console.log(nthToLast(arr1,3));
+    </script>
+
+  </body>
+</html>
