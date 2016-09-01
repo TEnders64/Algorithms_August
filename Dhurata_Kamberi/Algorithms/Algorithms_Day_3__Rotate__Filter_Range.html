@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Algorithms Day 3 Rorate</title>
+  </head>
+  <body>
+    <script>
+//     Array: Rotate
+//
+// Implement rotateArr(arr, shiftBy) that accepts array and offset.
+// Shift arr’s values to the right by that amount.
+// ‘Wrap-around’ any values that shift off array’s end to the other side, so that no data is lost.
+// Operate in-place: given ([1,2,3],1), change the array to [3,1,2].
+//
+// Second: allow negative shiftBy (shift L, not R).
+// Third: minimize memory usage. With no new array, handle arrays/shiftBys in the millions.
+// Fourth: minimize the touches of each element.
+      function rotateArr(arr, shiftBy){
+        // Shift right
+        // for(var i = arr.length-1; i>= arr.length-shiftBy;i--){
+        //   var temp = arr[arr.length-1];
+        //   for (var j = arr.length-2; j>=0; j--) {
+        //     arr[j+1] =arr[j];
+        //   }
+        //   arr[0] = temp;
+        // }
+        // shift left
+        for(var i = 0; i < shiftBy;i++){
+          var temp = arr[0];
+          for (var j = 1; j <= arr.length-1; j++) {
+            arr[j-1] = arr[j];
+          }
+          arr[arr.length-1]= temp;
+        }
+      }
+      // var arr=[1,2,3,4,5,6];
+      // var shiftBy = 3;
+      // console.log(arr);
+      // rotateArr(arr,shiftBy);
+      // console.log(arr);
+
+// Array: Filter Range
+//
+// Alan is good at breaking secret codes. One tool is to eliminate numbers he knows are outside a
+// certain specific range. Given array and values min and max, remove array values between min and max.
+// Work in-place: return the array you are given, with values in original order.
+// No built-in array functions.
+      function filterRange(array, min, max){
+        for (var i = 0; i < array.length; i++) {
+          if(array[i]>min && array[i]<max){
+            for (var j = i; j < array.length; j++) {
+              array[j]= array[j+1];
+            }
+            array.length -= 1;
+          }
+        }
+        return array;
+      }
+      var arr =[3,4,5,6];
+      console.log(arr);
+      filterRange(arr, 4, 6);
+      console.log(arr);
+
+    </script>
+  </body>
+</html>
