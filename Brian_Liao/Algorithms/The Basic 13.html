@@ -81,9 +81,9 @@
             //Given an array, print the max, min and average values for that array.
             var max = arr[0];
             var min = arr[0];
-            var sum = 0;
+            var sum = arr[0]
             var arr = [5, 10, 3, 7, -1, 6];
-            for (i = 0; i < arr.length; i++){
+            for (var i = 1; i < arr.length; i++){
                 if (max < arr[i]){
                     max = arr[i];
                 }
@@ -103,7 +103,7 @@
             for (i = 1; i < arr.length; i++){
                 arr[i - 1] = arr[i];
             }
-            arr.push(0);
+            arr[arr.length-1] = 0;
             console.log(arr);
 
             //Given an array of numbers, replace any negative values with the string 'Dojo'.
