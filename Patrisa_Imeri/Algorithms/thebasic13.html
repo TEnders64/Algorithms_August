@@ -1,0 +1,151 @@
+<html lang="en";
+<head>
+
+    <meta charset="utf-8";
+    <title>The Basic 13 </title>
+    <script type="text/javascript">
+    //Print 1-255
+    for(var i=1; i<256; i++){
+      console.log(i);
+    }
+
+    // //Print Odds 1-255
+    var number = 1;
+    while(number<256)
+    {
+      console.log(number);
+      number = number + 2;
+    }
+
+    //Print Ints and Sum 0-255
+    var sumValue = 0;
+    for(var i=1; i<256; i++){
+      sumValue = sumValue + i;
+      console.log(i + ", " + sumValue);
+    }
+
+    //Iterate & Print Array
+    var iterateArray = [1,2,3,4,5];
+    for (var i=0; i<iterateArray.length; i++){
+      console.log(iterateArray[i]);
+    }
+
+    //Find and Print Max
+    var arrayForMax = [10,20,5,30,3,40,1.5,50,7];
+    var max = arrayForMax[0];
+    for(var i=1;i<arrayForMax.length;i++){
+      if(max < arrayForMax[i]){
+        max = arrayForMax[i];
+      }
+    }
+    console.log(max);
+
+    //Get and Print Average
+    var arrayForAverage = [10,20,5,30,3,40,1.5,50,7];
+    var sum = 0;
+    for(var i=0;i<arrayForAverage.length;i++){
+      sum = sum + arrayForAverage[i];
+    }
+    console.log(sum/arrayForAverage.length);
+
+    //Array with Odds
+    var arrayWithOdds =[];
+    for(var i=1;i<100;i=+2){
+      arrayWithOdds.push(i);
+    }
+    console.log(arrayWithOdds)
+
+    //Square the variables
+    var arrayForSquare=[2,4,6,8,9];
+    for(var i=0;i<arrayForSquare.length;i++){
+      arrayForSquare[i] = arrayForSquare[i] * arrayForSquare[i];
+    }
+
+    console.log(x);
+
+
+    //Greater than Y
+    var y = greaterY([2,4,5,6,7,8,9], 4);
+
+    function greaterY(array, num){
+      var count = 0;
+      for(var i=0; i<array.length; i++){
+        if(array[i] > num){
+          count++;
+        }
+      }
+      console.log(count);
+      return array;
+    }
+
+    //Zero Out Negative Numbers
+    var arr = zeroNeg([2,4,-9,4,-8,7,7]);
+
+    function zeroNeg(arr){
+      for(var i=0;i<arr.length;i++){
+        if(arr[i]<0){
+          arr[i] = 0;
+        }
+      }
+      console.log(arr)
+
+      return arr;
+    }
+
+    //Min, Max, Average
+    baseStat([299,6,24,3,27,101,300]);
+
+    function baseStat(arr){
+      var min = arr[0];
+      var max = arr[0];
+      var sum = 0;
+      for(var i=0;i<arr.length;i++){
+
+        if(arr[i]< min){
+          min = arr[i];
+        }
+
+        if(arr[i]> max){
+          max = arr[i];
+        }
+        sum = sum + arr[i];
+      }
+
+      console.log("Min: " + min + ", Max: " + max + ", Average" + sum/arr.length);
+    }
+
+    //Shift Array Values
+    var newArr = shiftArray([3,6,1,23,25,0,0,9]);
+
+    function shiftArray(arr){
+      var shiftedArr = [6, 1, ];
+      for(var i=1;i<arr.length;i++){
+        shiftedArr[i-1] = arr[i];
+          shiftedArr[0]	= 6;
+      }
+      shiftedArr.push(0);
+      console.log(shiftedArr);
+      return shiftedArr;
+    }
+
+    //Swap String Array for negative Values
+    arraySwapDojo([3,4,5,-2,-3,-8,0,9,8]);
+
+    function arraySwapDojo(arr){
+      for(var i=0;i<arr.length;i++)
+      {
+        if(arr[i] < 0)
+        {
+          arr[i] = "Dojo";
+        }
+      }
+
+      console.log(arr);
+    }
+
+    </script>
+</head>
+<body>
+<h1>Go to View -> Developer -> Javascript console to see the results</h1>
+</body
+</html>
