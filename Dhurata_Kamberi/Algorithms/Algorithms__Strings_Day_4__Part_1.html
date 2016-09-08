@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Algorithms</title>
+  </head>
+  <body>
+    <script>
+//     Recreate these built-in functions from JavaScript’s string library:
+//
+// String.concat
+// string1.concat(str2,str3,...,strX) - add string(s) to end of existing one. Return new string.
+//
+      function concatinate(strArr){
+        var res = "";
+        for (var i = 0; i < arguments.length; i++) {
+          res += arguments[i];
+        }
+        console.log(res);
+      }
+      //concatinate('hello','world');
+//
+// * String.slice *
+// string.slice(start,end) - extract part of a string and return in a new one.
+// Start and end are indices into the string, with the first character at index 0.
+// End param is optional and, if present, refers to one beyond the last character to include.
+//
+// Bonus: include support for negative indices, representing offsets from string-end.
+// Example: string.slice(-1) returns the string’s last character.
+    var myString = "Hello";
+    String.prototype.mySlice = function(start, end) {
+    	var newString = ""
+    	var string = this;
+    	if (!end) { end = string.length; }
+    	if (end > string.length) {
+    		end = string.length;
+    	}
+    	for (var i = 0; i < string.length; i++) {
+    		if (i >= start && i <= end) {} // remove
+        else {
+          newString += string[i]; // show the elements that are outside start and end
+        }
+    	}
+    	return newString;
+    }
+    console.log(myString.mySlice(1,3));
+    </script>
+  </body>
+</html>

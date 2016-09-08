@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Algorithms</title>
+  </head>
+  <body>
+    <script>
+
+// Coin Change with Object
+// Given a number of U.S. cents, return the optimal configuration of coins, in an object.
+//
+      function generateCoinChange(cents){
+         var quarter = 0;
+         var dime = 0;
+         var nickel = 0;
+         var penny = 0;
+
+         while(cents > 0 ){
+            if(cents / 25 >= 1){
+               cents -= 25;
+               quarter ++;
+            }
+            else if(cents / 10 >= 1){
+               cents -= 10;
+               dime ++;
+            }
+            else if(cents / 5 >= 1){
+               cents -= 5;
+               nickel++;
+            }
+            else if(cents > 0){
+               cents -= 1;
+               penny++;
+            }
+          }
+         console.log(" Quarter: "+quarter + "\n Dime: "+dime + "\n Nickel: "+nickel + "\n Penny: "+penny);
+      }
+      // generateCoinChange(390);
+
+// Max/Min/Average with Object
+//
+// Given an array, return an object containing the array’s max, min and average values.
+//
+      function genereateMinMaxAvg(array){
+        var object = {"min":array[0],"max":array[0],"avg":0};
+            for (var i = 0; i < array.length; i++) {
+              if(object['max'] < array[i]){
+                object['max'] = array[i];
+              }else if(object['min'] > array[i]){
+                object['min'] = array[i];
+              }
+              object['avg'] += array[i];
+            }
+        object['avg'] = object['avg']/array.length;
+        return object;
+      }
+      // var arr1 = [4,3,1,6];
+      // console.log(genereateMinMaxAvg(arr1));
+
+// Zip Arrays into Map
+//
+// Associative arrays (Javascript objects) are sometimes called maps because a key (string) maps to a value.
+//Given two arrays, create an associative array (map) containing keys of the first, and values of the second.
+//For arr1 = ["abc", 3, "yo"] and arr2 = [42, "wassup", true], return {"abc": 42, 3: "wassup", "yo": true}.
+//
+      function zipArrays(arr1, arr2){
+        var obj = {};
+        for (var i = 0; i < arr1.length; i++) {
+            obj[arr1[i]] = arr2[i];
+        }
+        return obj;
+      }
+      // var arr1 = ["abc", 3, "yo"];
+      // var arr2 = [42, "wassup", true];
+      // console.log(zipArrays(arr1,arr2));
+// Invert Hash
+//
+// Associative arrays are also called hashes. Build invertHash(assocArr) to convert hash keys to values, and values to keys.
+// Example: given {"name": "Zaphod", "charm": "high", "morals": "dicey"},
+// return object {"Zaphod": "name", "high": "charm", "dicey": "morals"}.
+
+        function invertHash(assocArr){
+          for(key in assocArr){
+              assocArr[assocArr[key]] = key;
+              delete assocArr[key];
+          }
+          return assocArr;
+        }
+        var arr = {"name": "Zaphod", "charm": "high", "morals": "dicey"};
+        console.log(arr);
+        console.log(invertHash(arr));
+    </script>
+  </body>
+</html>
