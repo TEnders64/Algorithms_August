@@ -9,7 +9,7 @@ function removeFromArray(arr,start,end){
   for (var i = start; i <= end; i++) {
     count++
   }
-  for(var i = arr.length-1; i<arr.length; i++){
+  for(var i = end+1; i<arr.length; i++){
     arr[i-count] = arr[i];
   }
   arr.length = arr.length-count;
