@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Basic 13</title>
+    <script type="text/javascript">
+      //Print 1-255
+      function printI(){
+        for (var i = 1; i <= 255; i++) {
+          console.log(i);
+        }
+      }
+      //Print odds 1-255
+      function printOdds(){
+        for (var i = 1; i <= 255; i++) {
+          if(i%2==1){
+            console.log("i is negative", i);
+          }
+        }
+      }
+      //Print i and sum
+      function printIandSum(){
+        var sum = 0;
+        for (var i = 1; i < 256; i++) {
+          sum += i;
+          console.log(`The current sum is: ${sum} and i is: ${i}`);
+        }
+      }
+      //Iterate and Print Array
+      function getArrValues(arr){
+        for (var i = 0; i < arr.length; i++) {
+          console.log(arr[i]);
+        }
+      }
+      //Find and print max
+      function findAndPrintMax(arr){
+        var max = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+          if (max < arr[i]) {
+            max = arr[i];
+          }
+        }
+        console.log(`The max value is ${max}`);
+      }
+      //Find the average of an Array
+      function findAverage(arr){
+        var sum = arr[0];
+        for (var i = i; i < arr.length; i++) {
+          sum += arr[i]
+        }
+        console.log(`The average of the array values is: ${sum/arr.length}`)
+      }
+      //Create an array of odd values
+      function arrayOfOddValues(){
+        var myArr = [];
+        for (var i = 1; i < 256; i++) {
+          if(i % 2==1){
+            myArr.push(i);
+          }
+        }
+        console.log(`My arr is: ${myArr}`);
+      }
+      //Square values of an array
+      function squareValues(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          arr[i] = arr[i] * arr[i];
+        }
+      }
+      //Greater than y
+      function greaterThanY(y, arr) {
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+          if(arr[i] > y){
+            count++;
+          }
+        }
+        return count;
+      }
+      //Zero out negative values of the array
+      function zeroOutNegs(arr){
+        var i = 0;
+        while (i < arr.length) {
+          console.log(arr[i]);
+          if(arr[i] < 0){
+            arr[i] = 0;
+          }
+          i++;
+        }
+        console.log(arr);
+      }
+      //Min, Max, average
+      function minMaxAvg(arr) {
+        var min = arr[0];
+        var max = arr[0];
+        var sum = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+          if(arr[i] > max){
+            max = arr[i];
+          }
+          if(arr[i] < min){
+            min = arr[i];
+          }
+          sum += arr[i];
+        }
+        //Create an object
+        var output = [
+          {'The max is': max},
+          {'The min is': min},
+          {'The average is': sum/arr.length}
+        ]
+        //Create an array
+        var newOutput = [`The max value is ${max}, the min value is ${min}, and the average is ${sum/arr.length}`];
+        return newOutput;
+      }
+      //Shift Array values
+      function shiftArrayValues(arr) {
+        for (var i = 1; i < arr.length; i++) {
+          arr[i-1] = arr[i];
+        }
+        arr[i-1] = 0;
+      }
+      //Swap string for array negative values
+      function swagNegs(arr) {
+        var str = 'Dojo'
+        for (var i = 0; i < arr.length; i++) {
+          if(arr[i] < 0){
+            arr[i] = str;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to my Basic 13 algorithm page</h1>
+    </div>
+  </body>
+</html>
